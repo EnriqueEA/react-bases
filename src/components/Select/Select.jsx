@@ -7,7 +7,6 @@ function Select({ setCombo }) {
 
    return(
       <select name="" className="border-2 border-black rounded-md" onChange={e => setCombo(e.target.value)}>
-        <option>Colores</option>
         { options }
       </select>
    );

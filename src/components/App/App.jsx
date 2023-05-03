@@ -3,9 +3,10 @@ import { useState } from 'react'
 import Select from '../Select/Select';
 import Clock from '../Clock/Clock';
 import './App.css'
+import CharacterSearch from '../CharacterSearch/CharacterSearch';
 
 function App() {
-  const [combo, setCombo] = useState();
+  const [combo, setCombo] = useState('text-red-500');
   let component = <Clock color={ combo } />;
 
   // Renderizado condicional
@@ -18,6 +19,8 @@ function App() {
       <Select setCombo={ setCombo } />
       { component }
       {/* <Counter /> */}
+      <hr className='m-2 border border-red-500' />
+      <CharacterSearch />
     </div>
   )
 }
